@@ -17,9 +17,9 @@ jobs:
       - name: Install Dev Dependencies
         run: npm install
       - name: Lint html files
-        run: npm htmlhint "**/*.html"
+        run: npx htmlhint "**/*.html"
       - name: Lint css files
-        run: npm stylelint "**/*.css"
+        run: npx stylelint "**/*.css"
     
   build-job:
     runs-on: ubuntu-latest

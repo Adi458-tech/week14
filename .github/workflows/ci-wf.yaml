@@ -54,5 +54,5 @@ jobs:
       - name: List running container
         run: docker container ls
       - name: Push docker image on the docker Hub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/app-latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/w14:latest
 

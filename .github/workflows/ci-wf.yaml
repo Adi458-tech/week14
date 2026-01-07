@@ -46,11 +46,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build image
-        run: docker image build -t ${{ secrets.DOCKERHUB_USERNAME }}/app-latest .
+        run: docker image build -t ${{ secrets.DOCKERHUB_USERNAME }}/w14:latest .
       - name: List imagaes on the runner
         run: docker image ls
       - name: Create container on the runner
-        run: docker container run -d -p 2222:80 ${{ secrets.DOCKERHUB_USERNAME }}/app-latest
+        run: docker container run -d -p 2222:80 ${{ secrets.DOCKERHUB_USERNAME }}/w14:latest
       - name: List running container
         run: docker container ls
       - name: Push docker image on the docker Hub
